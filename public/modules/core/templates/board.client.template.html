@@ -1,0 +1,13 @@
+<div class="board-container" ng-class="{'rotate-180': board.rotated}">
+	<div class="board">
+		<div class="board-inner">
+			<div ng-repeat="squ in squareIter track by $index" class="board-row">
+				<div class="square" ng-repeat="square in squareIter track by $index">
+					<div class="centered-image">
+						<img ng-src="svgs/{{squares[$parent.$index + '' + $index] || 'x'}}.svg" width="100%" ng-class="{'rotate-180': board.rotated}">{{square}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
